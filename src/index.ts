@@ -54,7 +54,7 @@ export class MainMenuSystem extends createSystem({
       if (xrButton) {
         xrButton.setProperties({
           onClick: () => {
-            this.world.enterXR();
+            this.world.launchXR();
             entity.object3D!.visible = false;
           },
         });
