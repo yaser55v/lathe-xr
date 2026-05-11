@@ -1,0 +1,194 @@
+{
+  "element": {
+    "sourceTag": "panel",
+    "type": "custom",
+    "children": [
+      {
+        "sourceTag": "text",
+        "type": "custom",
+        "children": [
+          "Lathe XR Trainer"
+        ],
+        "properties": {
+          "class": "title"
+        },
+        "dataUid": "uid-2"
+      },
+      {
+        "sourceTag": "text",
+        "type": "custom",
+        "children": [
+          "Immersive training experience for industrial lathe operation."
+        ],
+        "properties": {
+          "class": "description"
+        },
+        "dataUid": "uid-3"
+      },
+      {
+        "sourceTag": "button",
+        "type": "custom",
+        "children": [
+          {
+            "sourceTag": "text",
+            "type": "custom",
+            "children": [
+              "ENTER XR"
+            ],
+            "properties": {
+              "style": {
+                "fontSize": "20px",
+                "fontWeight": "500"
+              }
+            },
+            "dataUid": "uid-5"
+          }
+        ],
+        "properties": {
+          "id": "xr-button",
+          "class": "xr-button"
+        },
+        "dataUid": "uid-4"
+      }
+    ],
+    "properties": {
+      "class": "panel-root"
+    },
+    "dataUid": "uid-1"
+  },
+  "classes": {
+    "panel-root": {
+      "content": {
+        "padding": "24px",
+        "flexDirection": "column",
+        "width": "400px",
+        "backgroundColor": "rgba(14, 16, 19, 0.95)",
+        "borderRadius": 16,
+        "border": "1px solid #2a2f38",
+        "alignItems": "center",
+        "gap": "20px"
+      }
+    },
+    "title": {
+      "content": {
+        "fontSize": "32px",
+        "fontWeight": "bold",
+        "color": "#f6f7f9"
+      }
+    },
+    "description": {
+      "content": {
+        "fontSize": "18px",
+        "color": "#a3acb8",
+        "textAlign": "center",
+        "lineHeight": "1.5"
+      }
+    },
+    "xr-button": {
+      "content": {
+        "width": "240px",
+        "height": "56px",
+        "backgroundColor": "#1a73e8",
+        "color": "white",
+        "borderRadius": 28,
+        "alignItems": "center",
+        "justifyContent": "center",
+        "hover": {
+          "backgroundColor": "#185abc"
+        }
+      }
+    }
+  },
+  "ranges": {
+    "panel-root": {
+      "start": {
+        "line": 1,
+        "column": 2
+      },
+      "end": {
+        "line": 1,
+        "column": 13
+      }
+    },
+    "title": {
+      "start": {
+        "line": 11,
+        "column": 2
+      },
+      "end": {
+        "line": 11,
+        "column": 8
+      }
+    },
+    "description": {
+      "start": {
+        "line": 16,
+        "column": 2
+      },
+      "end": {
+        "line": 16,
+        "column": 14
+      }
+    },
+    "xr-button": {
+      "start": {
+        "line": 22,
+        "column": 2
+      },
+      "end": {
+        "line": 22,
+        "column": 12
+      }
+    },
+    "uid-1": {
+      "start": {
+        "line": 36,
+        "column": 0
+      },
+      "end": {
+        "line": 43,
+        "column": 8
+      }
+    },
+    "uid-2": {
+      "start": {
+        "line": 37,
+        "column": 2
+      },
+      "end": {
+        "line": 37,
+        "column": 45
+      }
+    },
+    "uid-3": {
+      "start": {
+        "line": 38,
+        "column": 2
+      },
+      "end": {
+        "line": 38,
+        "column": 96
+      }
+    },
+    "uid-4": {
+      "start": {
+        "line": 40,
+        "column": 2
+      },
+      "end": {
+        "line": 42,
+        "column": 11
+      }
+    },
+    "uid-5": {
+      "start": {
+        "line": 41,
+        "column": 4
+      },
+      "end": {
+        "line": 41,
+        "column": 68
+      }
+    }
+  }
+}
