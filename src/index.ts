@@ -42,7 +42,7 @@ import type { Component as UIKitComponent } from "@pmndrs/uikit";
 export class MainMenuSystem extends createSystem({
   menu: {
     required: [PanelUI, PanelDocument],
-    where: [eq(PanelUI, "config", "./ui/main-menu.json")],
+    where: [eq(PanelUI, "config", "/ui/main-menu.json")],
   },
 }) {
   init() {
@@ -397,7 +397,7 @@ World.create(document.getElementById("scene-container") as HTMLDivElement, {
   const inspectionPanel = world.createTransformEntity();
   inspectionPanel.object3D!.name = "InspectionPanel";
   inspectionPanel.addComponent(PanelUI, {
-    config: "./ui/handwheel.json",
+    config: "/ui/handwheel.json",
     maxHeight: 1.02,
     maxWidth: 1.18,
   });
@@ -409,7 +409,7 @@ World.create(document.getElementById("scene-container") as HTMLDivElement, {
   const mainMenu = world.createTransformEntity();
   mainMenu.object3D!.name = "MainMenu";
   mainMenu.addComponent(PanelUI, {
-    config: "./ui/main-menu.json",
+    config: "/ui/main-menu.json",
     maxHeight: 1.2,
     maxWidth: 1.2,
   });
