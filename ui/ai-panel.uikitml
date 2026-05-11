@@ -1,0 +1,90 @@
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 50;
+    padding: 2;
+    background-color: #111215;
+    border-color: #2f89c6;
+    border-width: 0.15;
+    border-radius: 2.5;
+  }
+
+  .eyebrow {
+    font-size: 1.7;
+    color: #8abfe7;
+    letter-spacing: 0.08;
+    margin-bottom: 0.7;
+  }
+
+  .title {
+    font-size: 3.8;
+    font-weight: bold;
+    color: #fafafa;
+    text-align: left;
+    margin-bottom: 1;
+  }
+
+  .source {
+    font-size: 1.45;
+    color: #8c919b;
+    text-align: left;
+    margin-bottom: 1.2;
+  }
+
+  .response {
+    font-size: 1.95;
+    color: #d4d4d8;
+    text-align: left;
+    line-height: 1.55;
+    margin-bottom: 1.5;
+  }
+
+  .section-title {
+    font-size: 1.55;
+    color: #8abfe7;
+    margin-bottom: 0.6;
+  }
+
+  .media {
+    padding: 1;
+    background-color: #17191d;
+    border-color: #2f3136;
+    border-width: 0.1;
+    border-radius: 1.2;
+    margin-bottom: 0.8;
+  }
+
+  .media-text {
+    font-size: 1.45;
+    color: #b4b9c2;
+    text-align: left;
+    line-height: 1.45;
+  }
+
+  .footer {
+    margin-top: 0.6;
+    font-size: 1.35;
+    color: #717782;
+    text-align: left;
+  }
+</style>
+
+<div class="card">
+  <Text id="ai-panel-label" class="eyebrow">ESTENSIONE AI</Text>
+  <Text id="ai-panel-title" class="title">Spiegazione AI</Text>
+  <Text id="ai-panel-source" class="source">Spiegazione istantanea</Text>
+  <Text id="ai-panel-body" class="response">Sto preparando una sintesi chiara del componente selezionato.</Text>
+
+  <Text id="ai-media-label" class="section-title">Media rapidi</Text>
+
+  <div class="media">
+    <Text id="ai-image-link" class="media-text">Immagine: /media/lathe/apron-handwheel-diagram.jpg</Text>
+  </div>
+
+  <div class="media">
+    <Text id="ai-video-link" class="media-text">Video: /media/lathe/carriage-feed-overview.mp4</Text>
+  </div>
+
+  <Text id="ai-panel-footer" class="footer">Risposta breve, pensata per la navigazione in XR.</Text>
+</div>
