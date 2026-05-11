@@ -87,7 +87,7 @@ World.create(document.getElementById("scene-container") as HTMLDivElement, {
     sessionMode: SessionMode.ImmersiveVR,
     offer: "always",
     // Optional structured features; layers/local-floor are offered by default
-    features: { handTracking: true, layers: true },
+    features: { handTracking: true },
   },
   render: {
     // Disable SDK default gradient so our custom rig takes full control
