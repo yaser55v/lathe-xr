@@ -11,6 +11,15 @@ importers:
       '@iwsdk/core':
         specifier: 0.3.1
         version: 0.3.1(react@19.2.5)
+      '@pmndrs/uikit-default':
+        specifier: ^1.0.67
+        version: 1.0.67(super-three@0.181.0)
+      '@pmndrs/uikit-horizon':
+        specifier: ^1.0.67
+        version: 1.0.67(super-three@0.181.0)
+      '@pmndrs/uikit-lucide':
+        specifier: ^1.0.67
+        version: 1.0.67(super-three@0.181.0)
       three:
         specifier: npm:super-three@0.181.0
         version: super-three@0.181.0
@@ -665,14 +674,34 @@ packages:
   '@pmndrs/msdfonts@1.0.64':
     resolution: {integrity: sha512-fyDNvCIGUTUYxDOzQnLOAGEuDQbyjx1JUlEYrjHB8KLDWzVl0j2SoFiLN4AwahEh4pXiA7XdJBNneQKnfMa/Bw==}
 
+  '@pmndrs/msdfonts@1.0.67':
+    resolution: {integrity: sha512-tBEK+suALkhZ5i9rJBR0PYx4uvDD0nVQGoEENBMLTmeL1kNzhbJ7+mfAv1ATW1w42TOuREI9FfAa5ca1N8pcxQ==}
+
   '@pmndrs/pointer-events@6.6.29':
     resolution: {integrity: sha512-o4YD6VfJgDYjFgde/YyAw2X5KY454tdmOXrHGOvKTWJBHzkL90B5vH4rqmexwRVvaDfT3YLvVh/Dm5cBbgZXMg==}
+
+  '@pmndrs/uikit-default@1.0.67':
+    resolution: {integrity: sha512-2U0wem/axfqLSsjXbGFfyvQoGUeLyU2hBDnJJpIoTRWRl6Q2iSgyrSgVLsizVa4/MSsCg79H8Pyiz9a6F+/Evg==}
+
+  '@pmndrs/uikit-horizon@1.0.67':
+    resolution: {integrity: sha512-NkjbzklB7suR/tS8CUAPvUpe2Ez+xJjZm3qF2iPtgm0ylZGDkA8Nq/vknRWrwyZD6nNN5f4o0goIoMHtrCRCNA==}
+
+  '@pmndrs/uikit-lucide@1.0.67':
+    resolution: {integrity: sha512-/qJlNX/xd+KsbS2SdU/7VBGGk67VS4tx2X/2A6FeMa2L2/NsvLjs7mReoRLR2DvKVHsz6GxPJd0m3uSoRjuELw==}
 
   '@pmndrs/uikit-pub-sub@1.0.64':
     resolution: {integrity: sha512-+hlc5aWC3wQlA/zihwh+OGSm3aY9O+L/TEuNLwXw6R8syHMv7obqeY6s/hcjzD92k6DRQZLhVzVy+yqqVKAbRA==}
 
+  '@pmndrs/uikit-pub-sub@1.0.67':
+    resolution: {integrity: sha512-WC14YjujQ+gIliaEN06/7zygIwxKzweasNicwqVjTQ1PRJLe/HK9pyyS7DBAtfUy9y/9i5dfVFJLhGI8R61dWA==}
+
   '@pmndrs/uikit@1.0.64':
     resolution: {integrity: sha512-FQgF8sf46U6fmHnqOn32S04lnWiXVxQO6MatL7FgoLKJ74YIBgEHgwKHRwltgLrN/rcTu7LgJm7LgvXvMccEGA==}
+    peerDependencies:
+      three: '>=0.162'
+
+  '@pmndrs/uikit@1.0.67':
+    resolution: {integrity: sha512-36zaHVHxRPSWgr78r1GUEP0wcfC2hvx1a5t459Yx9IOYqolKCCloCticoSDCQHNnEbeC53xSDMbb70dz8IIljA==}
     peerDependencies:
       three: '>=0.162'
 
@@ -3079,9 +3108,35 @@ snapshots:
 
   '@pmndrs/msdfonts@1.0.64': {}
 
+  '@pmndrs/msdfonts@1.0.67': {}
+
   '@pmndrs/pointer-events@6.6.29': {}
 
+  '@pmndrs/uikit-default@1.0.67(super-three@0.181.0)':
+    dependencies:
+      '@pmndrs/uikit': 1.0.67(super-three@0.181.0)
+      '@pmndrs/uikit-lucide': 1.0.67(super-three@0.181.0)
+    transitivePeerDependencies:
+      - three
+
+  '@pmndrs/uikit-horizon@1.0.67(super-three@0.181.0)':
+    dependencies:
+      '@pmndrs/uikit': 1.0.67(super-three@0.181.0)
+      '@pmndrs/uikit-lucide': 1.0.67(super-three@0.181.0)
+    transitivePeerDependencies:
+      - three
+
+  '@pmndrs/uikit-lucide@1.0.67(super-three@0.181.0)':
+    dependencies:
+      '@pmndrs/uikit': 1.0.67(super-three@0.181.0)
+    transitivePeerDependencies:
+      - three
+
   '@pmndrs/uikit-pub-sub@1.0.64':
+    dependencies:
+      '@preact/signals-core': 1.14.1
+
+  '@pmndrs/uikit-pub-sub@1.0.67':
     dependencies:
       '@preact/signals-core': 1.14.1
 
@@ -3101,6 +3156,15 @@ snapshots:
       '@preact/signals-core': 1.14.1
       '@zappar/msdf-generator': 1.2.4
       three: 0.184.0
+      yoga-layout: 3.2.1
+
+  '@pmndrs/uikit@1.0.67(super-three@0.181.0)':
+    dependencies:
+      '@pmndrs/msdfonts': 1.0.67
+      '@pmndrs/uikit-pub-sub': 1.0.67
+      '@preact/signals-core': 1.14.1
+      '@zappar/msdf-generator': 1.2.4
+      three: super-three@0.181.0
       yoga-layout: 3.2.1
 
   '@pmndrs/uikitml@0.1.12(super-three@0.181.0)':

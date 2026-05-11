@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@iwsdk/core": "0.3.1",
+    "@pmndrs/uikit-default": "^1.0.67",
+    "@pmndrs/uikit-horizon": "^1.0.67",
+    "@pmndrs/uikit-lucide": "^1.0.67",
     "three": "npm:super-three@0.181.0",
     "three-mesh-ui": "^6.5.4"
   },

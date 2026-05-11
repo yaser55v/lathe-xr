@@ -1,0 +1,44 @@
+<style>
+  .panel-root {
+    padding: 24px;
+    flex-direction: column;
+    width: 400px;
+    background-color: rgba(14, 16, 19, 0.95);
+    border-radius: 16px;
+    border: 1px solid #2a2f38;
+    align-items: center;
+    gap: 20px;
+  }
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #f6f7f9;
+  }
+  .description {
+    font-size: 18px;
+    color: #a3acb8;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .xr-button {
+    width: 240px;
+    height: 56px;
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 28px;
+    align-items: center;
+    justify-content: center;
+  }
+  .xr-button:hover {
+    background-color: #185abc;
+  }
+</style>
+
+<Panel class="panel-root">
+  <Text class="title">Lathe XR Trainer</Text>
+  <Text class="description">Immersive training experience for industrial lathe operation.</Text>
+  
+  <button id="xr-button" class="xr-button">
+    <Text style="font-size: 20px; font-weight: 500;">ENTER XR</Text>
+  </button>
+</Panel>

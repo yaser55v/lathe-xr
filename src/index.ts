@@ -30,10 +30,38 @@ import {
   PanelUI,
 } from "@iwsdk/core";
 
-import { EnvironmentType, LocomotionEnvironment, IBLTexture, DomeTexture } from "@iwsdk/core";
+import { EnvironmentType, LocomotionEnvironment, IBLTexture, DomeTexture, PanelDocument } from "@iwsdk/core";
+import * as horizonKit from "@pmndrs/uikit-horizon";
 
 import { Handwheel, HandwheelSystem } from "./handwheel.js";
 import { Door, DoorSystem } from "./door.js";
+
+import { createSystem, eq } from "@iwsdk/core";
+import type { Component as UIKitComponent } from "@pmndrs/uikit";
+
+export class MainMenuSystem extends createSystem({
+  menu: {
+    required: [PanelUI, PanelDocument],
+    where: [eq(PanelUI, "config", "./ui/main-menu.json")],
+  },
+}) {
+  init() {
+    this.queries.menu.subscribe("qualify", (entity) => {
+      const doc = entity.getValue(PanelDocument, "document") as { getElementById(id: string): UIKitComponent | null };
+      if (!doc) return;
+
+      const xrButton = doc.getElementById("xr-button");
+      if (xrButton) {
+        xrButton.setProperties({
+          onClick: () => {
+            this.world.enterXR();
+            entity.object3D!.visible = false;
+          },
+        });
+      }
+    });
+  }
+}
 
 const assets: AssetManifest = {
   chimeSound: {
@@ -71,6 +99,9 @@ World.create(document.getElementById("scene-container") as HTMLDivElement, {
     physics: false,
     sceneUnderstanding: false,
     environmentRaycast: false,
+    spatialUI: {
+      kits: [horizonKit],
+    },
   },
 }).then((world) => {
   const { camera, renderer } = world;
@@ -374,7 +405,18 @@ World.create(document.getElementById("scene-container") as HTMLDivElement, {
   inspectionPanel.object3D!.position.set(1.08, 1.95, -3.0);
   inspectionPanel.object3D!.visible = false;
 
+  // ── Main Menu ─────────────────────────────────────────────────────────────
+  const mainMenu = world.createTransformEntity();
+  mainMenu.object3D!.name = "MainMenu";
+  mainMenu.addComponent(PanelUI, {
+    config: "./ui/main-menu.json",
+    maxHeight: 1.2,
+    maxWidth: 1.2,
+  });
+  mainMenu.object3D!.position.set(0, 1.6, 0.5);
+
   // ── Register systems ──────────────────────────────────────────────────────
   world.registerSystem(HandwheelSystem);
   world.registerSystem(DoorSystem);
+  world.registerSystem(MainMenuSystem);
 });
