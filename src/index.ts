@@ -37,7 +37,7 @@ import { Door, DoorSystem } from "./door.js";
 
 const assets: AssetManifest = {
   chimeSound: {
-    url: "/audio/chime.mp3",
+    url: "./audio/chime.mp3",
     type: AssetType.Audio,
     priority: "background",
   },
@@ -47,7 +47,7 @@ const assets: AssetManifest = {
     priority: "critical",
   },
   machineShop: {
-    url: "/textures/autoshop_01_1k.hdr",
+    url: "./textures/autoshop_01_1k.hdr",
     type: AssetType.HDRTexture,
     priority: "background",
   },
@@ -366,7 +366,7 @@ World.create(document.getElementById("scene-container") as HTMLDivElement, {
   const inspectionPanel = world.createTransformEntity();
   inspectionPanel.object3D!.name = "InspectionPanel";
   inspectionPanel.addComponent(PanelUI, {
-    config: "/ui/handwheel.json",
+    config: "./ui/handwheel.json",
     maxHeight: 1.02,
     maxWidth: 1.18,
   });

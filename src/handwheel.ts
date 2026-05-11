@@ -115,7 +115,7 @@ export class HandwheelSystem extends createSystem({
   pressed: { required: [Handwheel, Pressed] },
   inspectionPanel: {
     required: [PanelUI, PanelDocument],
-    where: [eq(PanelUI, "config", "/ui/handwheel.json")],
+    where: [eq(PanelUI, "config", "./ui/handwheel.json")],
   },
 }) {
   private highlightColor!: Color;
