@@ -12,6 +12,7 @@ export default defineConfig({
         device: "metaQuest3",
         injectOnBuild: true,
         activation: "always",
+        userAgentException: /OculusBrowser/,
       },
       ai: { tools: ["claude"] },
       verbose: true,
